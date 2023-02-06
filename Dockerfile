@@ -3,7 +3,7 @@ FROM selenium/standalone-chrome:109.0
 USER root
 
 RUN apt-get update && apt-get install --no-install-recommends -f -y \
-  python3-pip
+  python3-pip \
 && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir selenium
