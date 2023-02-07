@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  get_block:
-    container_name: get_block
+  my_container:
+    container_name: <MY_NAME>
     build: .
     restart: unless-stopped
     shm_size: 2g
@@ -12,4 +12,4 @@ services:
     volumes:
       - .:/app
     environment:
-      - PYTHON_FILE_PATH=tron_usdt_check.py
+      - PYTHON_FILE_PATH=<path to a python file to run at startup>
