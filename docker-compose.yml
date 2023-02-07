@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  get_block:
+    container_name: get_block
+    build: .
+    restart: unless-stopped
+    shm_size: 2g
+    ports:
+      - "127.0.0.1:4444:4444"
+      - "127.0.0.1:7900:7900"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHON_FILE_PATH=tron_usdt_check.py
