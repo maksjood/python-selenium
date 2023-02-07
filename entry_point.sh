@@ -23,3 +23,5 @@ function shutdown {
 }
 
 trap shutdown SIGTERM SIGINT
+
+python3 ${PYTHON_FILE_PATH}
