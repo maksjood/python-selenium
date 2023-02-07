@@ -7,5 +7,6 @@ RUN apt-get update && apt-get install --no-install-recommends -f -y \
 && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir selenium
+
 COPY ./entry_point.sh /opt/bin/entry_point.sh
-# RUN chmod a+x /opt/bin/entry_point.sh
+RUN chmod a+x /opt/bin/entry_point.sh
